@@ -7,93 +7,121 @@
     android:background="@color/black"
     tools:context=".view.MainActivity">
 
-
     <EditText
-        android:id="@+id/telefonetxt"
+        android:id="@+id/FUNCtelefone"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
-        android:background="@color/cardview_light_background"
-        android:text="@string/telefone"
+        android:background="#D9D9DA"
+        android:hint="Telefone"
         android:textSize="28sp"
+        android:autofillHints="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nometxt" />
+        app:layout_constraintTop_toBottomOf="@+id/FUNCnome" />
 
     <EditText
-        android:id="@+id/confirmasenhatxt"
+        android:id="@+id/FUNCconfirmasenha"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
-        android:background="@color/cardview_light_background"
+        android:background="#D9D9DA"
         android:radius="25dp"
-        android:text="@string/confirmar_senha"
+        android:hint="Confirmar senha"
         android:textSize="28sp"
+        android:autofillHints="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senhatxt" />
+        app:layout_constraintTop_toBottomOf="@+id/FUNCsenha" />
 
     <EditText
-        android:id="@+id/senhatxt"
+        android:id="@+id/FUNCsenha"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
-        android:background="@color/cardview_light_background"
+        android:background="#D9D9DA"
         android:radius="25dp"
-        android:text="@string/senha"
+        android:hint="Senha"
         android:textSize="28sp"
+        android:autofillHints="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/FUNCemail" />
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/FUNCtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cadastro"
+        android:layout_marginTop="45dp"
+        android:text="Cadastro funcionário"
         android:textColor="#FFEB3B"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
-    <EditText
-        android:id="@+id/nometxt"
-        android:layout_width="369dp"
-        android:layout_height="50dp"
-        app:circularflow_radiusInDP=""
-        android:layout_centerInParent="true"
-        android:layout_marginTop="40dp"
-        android:background="@color/cardview_light_background"
-        android:text="@string/nome"
-        android:textSize="28sp"
+    <View
+        android:id="@+id/quebralinha1"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:background="#FFC107"
+        app:layout_constraintBottom_toTopOf="@+id/FUNCtxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+
+    <View
+        android:id="@+id/quebralinha2"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:background="#FFC107"
+        app:layout_constraintBottom_toTopOf="@+id/FUNCnome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FUNCtxt" />
 
     <EditText
-        android:id="@+id/emailtxt"
+        android:id="@+id/FUNCnome"
+        android:layout_width="369dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:background="#D9D9DA"
+        android:hint="Nome"
+        android:textSize="28sp"
+        android:autofillHints="name"
+        app:circularflow_radiusInDP=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FUNCtxt" />
+
+    <EditText
+        android:id="@+id/FUNCemail"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
-        android:background="@color/cardview_light_background"
+        android:background="#D9D9DA"
         android:radius="25dp"
-        android:text="@string/email"
+        android:hint="E-mail"
         android:textSize="28sp"
+        android:autofillHints="emailAddress"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxRadiusBottomStart="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefonetxt" />
+        app:layout_constraintTop_toBottomOf="@+id/FUNCtelefone" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
 
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@color/white"
         android:backgroundTint="#FFC107"
@@ -101,43 +129,49 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/IMGlogo"
         android:layout_width="89dp"
         android:layout_height="89dp"
-        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/IMGperfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
         app:srcCompat="@drawable/icone"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/IMGnotificacao"
+        android:layout_width="56dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/IMGperfil"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/notificao"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="36dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/IMGmenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/IMGnotificacao"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
         app:srcCompat="@drawable/seta"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="51dp"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/cadastrobtn"
+        android:id="@+id/FUNCbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/confirmar"
@@ -147,8 +181,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmasenhatxt"
-        tools:ignore="MissingConstraints"/>
-
-
+        app:layout_constraintTop_toBottomOf="@+id/FUNCconfirmasenha"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
