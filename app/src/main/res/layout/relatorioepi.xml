@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <EditText
+        android:id="@+id/EPIdescricao"
+        android:layout_width="369dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="32dp"
+        android:background="#D9D9DA"
+        android:text="Descrição do EPI"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/EPIcategoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EPInome" />
+
+    <TextView
+        android:id="@+id/Relatoriotxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Relatório EPI"
+        android:textColor="#FFEB3B"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quebralinha2" />
+
+    <EditText
+        android:id="@+id/EPInome"
+        android:layout_width="369dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="35dp"
+        android:background="#D9D9DA"
+        android:radius="25dp"
+        android:text="Nome"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/EPIdescricao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quebralinha1" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+
+        android:layout_width="411dp"
+        android:layout_height="110dp"
+        android:background="@color/white"
+        android:backgroundTint="#FFC107"
+        android:minHeight="?attr/actionBarSize"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="89dp"
+        android:layout_height="89dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintTop_toTopOf="@+id/destaque"
+        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/destaque"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/destaque"
+        app:srcCompat="@drawable/notificao"
+        tools:ignore="MissingConstraints,UnknownId,UnknownIdInLayout" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:srcCompat="@drawable/seta"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/quebralinha1"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:background="#FFC107"
+        app:layout_constraintBottom_toTopOf="@+id/EPInome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Relatoriotxt" />
+
+    <View
+        android:id="@+id/quebralinha2"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:background="#FFC107"
+        app:layout_constraintBottom_toTopOf="@+id/Relatoriotxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        android:layout_marginTop="25dp"
+        />
+    <EditText
+        android:id="@+id/EPIcategoria"
+        android:layout_width="369dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="28dp"
+        android:background="#D9D9DA"
+        android:hint="Categoria"
+        android:radius="25dp"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/cadastrobtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EPIdescricao" />
+
+
+    <Button
+        android:id="@+id/cadastrobtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFC107"
+        android:text="Próximo"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EPIcategoria"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

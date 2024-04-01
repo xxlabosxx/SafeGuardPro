@@ -107,10 +107,6 @@
         android:radius="25dp"
         android:hint="ID do EPI"
         android:textSize="28sp"
-        app:boxCornerRadiusBottomEnd="25dp"
-        app:boxCornerRadiusTopEnd="25dp"
-        app:boxCornerRadiusTopStart="25dp"
-        app:boxRadiusBottomStart="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EPIdatavalidade" />
