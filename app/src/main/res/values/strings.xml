@@ -7,6 +7,4 @@
     <string name="email">Email</string>
     <string name="nome">Nome</string>
     <string name="confirmar">Confirmar</string>
-    <string name="regras">Regras</string>
-    <string name="data_de_validade">Data de validade</string>
 </resources>
