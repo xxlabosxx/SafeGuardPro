@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".view.MainActivity">
+    tools:context=".view.SafeGuardPro">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="619dp"
         android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,7 +29,7 @@
                 app:cardCornerRadius="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
+                >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -380,15 +381,8 @@
                         android:textSize="20dp"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </androidx.cardview.widget.CardView>
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -398,8 +392,8 @@
         android:background="@color/white"
         android:backgroundTint="#FFC107"
         android:minHeight="?attr/actionBarSize"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <ImageView
         android:id="@+id/IMGlogo"
         android:layout_width="89dp"
@@ -413,13 +407,10 @@
         android:id="@+id/IMGperfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
-        app:srcCompat="@drawable/icone"
-        tools:ignore="MissingConstraints" />
-
+        app:srcCompat="@drawable/icone" />
     <ImageView
         android:id="@+id/IMGnotificacao"
         android:layout_width="56dp"
@@ -429,8 +420,7 @@
         app:layout_constraintEnd_toStartOf="@+id/IMGperfil"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/notificao"
-        tools:ignore="MissingConstraints" />
-
+        />
     <ImageView
         android:id="@+id/IMGmenu"
         android:layout_width="wrap_content"
@@ -440,8 +430,5 @@
         app:layout_constraintEnd_toStartOf="@+id/IMGnotificacao"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
         app:srcCompat="@drawable/seta"
-        tools:ignore="MissingConstraints" />
-
-
-
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

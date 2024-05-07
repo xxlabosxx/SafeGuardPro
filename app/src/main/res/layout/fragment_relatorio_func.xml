@@ -10,23 +10,20 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
 
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@color/white"
         android:backgroundTint="#FFC107"
         android:minHeight="?attr/actionBarSize"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="89dp"
         android:layout_height="89dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintTop_toTopOf="@+id/destaque"
-        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -36,9 +33,7 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/destaque"
-        app:srcCompat="@drawable/icone"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/icone"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -47,9 +42,7 @@
         android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/destaque"
-        app:srcCompat="@drawable/notificao"
-        tools:ignore="MissingConstraints,UnknownId,UnknownIdInLayout" />
+        app:srcCompat="@drawable/notificao"/>
 
 
     <ImageView
@@ -59,8 +52,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
-        app:srcCompat="@drawable/seta"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/seta"/>
 
     <View
         android:id="@+id/view"
@@ -70,8 +62,7 @@
         android:background="#FFC107"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"/>
 
     <TextView
         android:id="@+id/textView"
@@ -93,15 +84,14 @@
         android:background="#FFC107"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -155,6 +145,7 @@
                     android:layout_height="match_parent"
                     android:text="1888R$"
                     android:textSize="18dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -176,6 +167,7 @@
                     android:layout_height="match_parent"
                     android:text="111111111-22"
                     android:textSize="18dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"

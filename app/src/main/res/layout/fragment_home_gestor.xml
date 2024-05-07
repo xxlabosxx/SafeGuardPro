@@ -9,24 +9,23 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
-
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@color/white"
         android:backgroundTint="#FFC107"
         android:minHeight="?attr/actionBarSize"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="89dp"
-        android:layout_height="89dp"
+        android:layout_width="86dp"
+        android:layout_height="91dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintTop_toTopOf="@+id/destaque"
-        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -36,9 +35,8 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/destaque"
         app:srcCompat="@drawable/icone"
-        tools:ignore="MissingConstraints" />
+        />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -47,26 +45,23 @@
         android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/destaque"
-        app:srcCompat="@drawable/notificao"
-        tools:ignore="MissingConstraints,UnknownId" />
+        app:srcCompat="@drawable/notificao"/>
 
     <View
+        android:id="@+id/view9"
         android:layout_width="100dp"
         android:layout_height="2dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="60dp"
         android:background="#FFC107"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Tela funcionário"
+        android:layout_marginTop="36dp"
+        android:text="Tela gestor"
         android:textColor="#FFEB3B"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,73 +71,114 @@
     <View
         android:layout_width="100dp"
         android:layout_height="2dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="64dp"
         android:background="#FFC107"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        tools:ignore="MissingConstraints" />
+        />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/tvCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        android:text="EPI"
+        android:text="Cadastro EPI"
         android:textColor="#FFEB3B"
         android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <View
-        android:id="@+id/view8"
+        android:id="@+id/view5"
         android:layout_width="350dp"
         android:layout_height="2dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="172dp"
         android:background="#FFC107"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="380dp"
-        android:text="Validade"
+        android:text="Relatório EPI"
         android:textColor="#FFEB3B"
-        android:textSize="30sp"
-        app:layout_constraintHorizontal_bias="0.442"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <View
-        android:id="@+id/view7"
+        android:id="@+id/view4"
         android:layout_width="350dp"
         android:layout_height="2dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="272dp"
         android:background="#FFC107"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <TextView
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Regras"
+        android:text="Cadastro funcionário"
         android:textColor="#FFEB3B"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/view7"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view8" />
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <View
+        android:id="@+id/view6"
         android:layout_width="350dp"
         android:layout_height="2dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="496dp"
         android:background="#FFC107"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="384dp"
+        android:background="#FFC107"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        />
+
+    <TextView
+        android:id="@+id/relatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relatório Funcionário"
+        android:textColor="#FFEB3B"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/view6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro Entrega"
+        android:textColor="#FFEB3B"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

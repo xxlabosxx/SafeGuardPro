@@ -8,56 +8,55 @@
     tools:context=".view.MainActivity">
 
     <EditText
-        android:id="@+id/FUNCtelefone"
+        android:id="@+id/EPIdatavalidade"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
         android:background="#D9D9DA"
-        android:hint="Telefone"
+        android:hint="@string/data_de_validade"
         android:textSize="28sp"
-        android:autofillHints="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCnome" />
+        app:layout_constraintTop_toBottomOf="@+id/EPInome"
+        />
 
     <EditText
-        android:id="@+id/FUNCconfirmasenha"
+        android:id="@+id/EPIcategoria"
         android:layout_width="369dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="35dp"
         android:background="#D9D9DA"
+        android:hint="Categoria"
+        android:layout_marginTop="35dp"
+        android:minHeight="50dp"
         android:radius="25dp"
-        android:hint="Confirmar senha"
         android:textSize="28sp"
-        android:autofillHints="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCsenha" />
+        app:layout_constraintTop_toBottomOf="@+id/EPIdescricao" />
+
 
     <EditText
-        android:id="@+id/FUNCsenha"
+        android:id="@+id/EPIdescricao"
         android:layout_width="369dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
         android:background="#D9D9DA"
-        android:radius="25dp"
-        android:hint="Senha"
+        android:hint="Descrição do EPI"
+        android:minHeight="50dp"
         android:textSize="28sp"
-        android:autofillHints="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCemail" />
-
+        app:layout_constraintTop_toBottomOf="@+id/EPIid" />
 
     <TextView
-        android:id="@+id/FUNCtxt"
+        android:id="@+id/EPIcadastrotxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:text="Cadastro funcionário"
+        android:text="Cadastro EPI"
         android:textColor="#FFEB3B"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,54 +64,52 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <View
-        android:id="@+id/quebralinha1"
+        android:id="@+id/view"
         android:layout_width="350dp"
         android:layout_height="2dp"
         android:background="#FFC107"
-        app:layout_constraintBottom_toTopOf="@+id/FUNCtxt"
+        app:layout_constraintBottom_toTopOf="@+id/EPIcadastrotxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <View
-        android:id="@+id/quebralinha2"
+        android:id="@+id/view2"
         android:layout_width="350dp"
         android:layout_height="2dp"
         android:background="#FFC107"
-        app:layout_constraintBottom_toTopOf="@+id/FUNCnome"
+        app:layout_constraintBottom_toTopOf="@+id/EPInome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/EPIcadastrotxt" />
 
     <EditText
-        android:id="@+id/FUNCnome"
+        android:id="@+id/EPInome"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="40dp"
         android:background="#D9D9DA"
-        android:hint="Nome"
+        android:hint="Nome EPI"
         android:textSize="28sp"
-        android:autofillHints="name"
         app:circularflow_radiusInDP=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/EPIcadastrotxt" />
 
     <EditText
-        android:id="@+id/FUNCemail"
+        android:id="@+id/EPIid"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
         android:background="#D9D9DA"
         android:radius="25dp"
-        android:hint="E-mail"
+        android:hint="ID do EPI"
         android:textSize="28sp"
-        android:autofillHints="emailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCtelefone" />
+        app:layout_constraintTop_toBottomOf="@+id/EPIdatavalidade" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
@@ -122,10 +119,12 @@
         android:background="@color/white"
         android:backgroundTint="#FFC107"
         android:minHeight="?attr/actionBarSize"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
-        android:id="@+id/IMGlogo"
+        android:id="@+id/imageView"
         android:layout_width="89dp"
         android:layout_height="89dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
@@ -134,7 +133,7 @@
         app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3" />
 
     <ImageView
-        android:id="@+id/IMGperfil"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -142,41 +141,40 @@
         app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
         app:srcCompat="@drawable/icone"
-        tools:ignore="MissingConstraints" />
+        />
 
     <ImageView
-        android:id="@+id/IMGnotificacao"
+        android:id="@+id/imageView3"
         android:layout_width="56dp"
         android:layout_height="46dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintEnd_toStartOf="@+id/IMGperfil"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/notificao"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/notificao"/>
 
     <ImageView
-        android:id="@+id/IMGmenu"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintEnd_toStartOf="@+id/IMGnotificacao"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
-        app:srcCompat="@drawable/seta"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/seta"/>
 
     <Button
-        android:id="@+id/FUNCbtn"
+        android:id="@+id/EPIcadastrobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/confirmar"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="#FFC107"
+        android:text="@string/confirmar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCconfirmasenha"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/EPIcategoria"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
