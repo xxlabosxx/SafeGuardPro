@@ -15,7 +15,7 @@
         android:layout_marginTop="32dp"
         android:background="#D9D9DA"
         android:text="Descrição do EPI"
-        android:textColor="@color/cardview_shadow_start_color"
+        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@id/EPIcategoria"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
         android:background="#D9D9DA"
         android:radius="25dp"
         android:text="Nome"
-        android:textColor="@color/cardview_shadow_start_color"
+        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@id/EPIdescricao"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,23 +53,22 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
 
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@color/white"
         android:backgroundTint="#FFC107"
         android:minHeight="?attr/actionBarSize"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="89dp"
         android:layout_height="89dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/destaque"
-        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -98,8 +97,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
-        app:srcCompat="@drawable/seta"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/seta"/>
 
     <View
         android:id="@+id/quebralinha1"
@@ -131,7 +129,7 @@
         android:background="#D9D9DA"
         android:hint="Categoria"
         android:radius="25dp"
-        android:textColor="@color/cardview_shadow_start_color"
+        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@id/cadastrobtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,8 +148,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EPIcategoria"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/EPIcategoria"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
