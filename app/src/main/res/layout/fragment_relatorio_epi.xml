@@ -127,7 +127,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="28dp"
         android:background="#D9D9DA"
-        android:hint="Categoria"
+        android:text="Categoria"
         android:radius="25dp"
         android:textColor="@color/black"
         android:textSize="28sp"
