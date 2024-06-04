@@ -4,11 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".view.MainActivity">
+    android:background="@color/black">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/white"
+        android:backgroundTint="#FFC107"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar2"
         android:layout_width="411dp"
         android:layout_height="40dp"
         android:background="@color/white"
@@ -31,7 +40,7 @@
         android:id="@+id/imageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3"
         tools:ignore="MissingConstraints" />
 
@@ -54,7 +63,6 @@
         app:srcCompat="@drawable/notificao"
         tools:ignore="MissingConstraints,UnknownId,UnknownIdInLayout" />
 
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
@@ -63,6 +71,5 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:srcCompat="@drawable/seta"
         tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
