@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.estudadospelanasa.safeguardpro.service.model.Funcionario
 import com.estudadospelanasa.safeguardpro.viewmodel.FuncionarioViewModel
 import com.gustavolabos.SafeGuardPro.R
 import com.gustavolabos.SafeGuardPro.databinding.FragmentCadastroFuncBinding
@@ -16,8 +15,6 @@ class CadastroFuncFragment : Fragment() {
 
     private var _binding: FragmentCadastroFuncBinding? = null
     private val binding: FragmentCadastroFuncBinding get() = _binding!!
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,5 +32,4 @@ class CadastroFuncFragment : Fragment() {
 
         viewModel.load()
     }
-
 }

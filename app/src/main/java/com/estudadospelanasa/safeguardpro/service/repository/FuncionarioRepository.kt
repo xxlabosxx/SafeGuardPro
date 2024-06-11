@@ -12,9 +12,11 @@ import okhttp3.RequestBody.Companion.toRequestBody
 
 class FuncionarioRepository(context: Context) {
 
-    private val mRemote = RetrofitClient.createService(FuncionarioService::class.java)
+    private val mRemote =
+        RetrofitClient.createService(FuncionarioService::class.java)
 
-    private val funcionarioEmpty = Funcionario(0, "", "", "")
+    private val funcionarioEmpty =
+        Funcionario(0, "", "", "")
 
     suspend fun getFuncionario(): List<Funcionario> {
         return mRemote.getFuncionarios()

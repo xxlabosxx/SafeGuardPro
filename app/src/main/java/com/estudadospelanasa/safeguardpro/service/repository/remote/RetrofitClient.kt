@@ -1,6 +1,7 @@
 package com.estudadospelanasa.safeguardpro.service.repository.remote
 
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -11,6 +12,8 @@ class RetrofitClient private constructor(){
 
         private fun getRetrofitInstance(): Retrofit {
             val httpClient = OkHttpClient.Builder()
+            val logging = HttpLoggingInterceptor()
+            logging.level = HttpLoggingInterceptor.Level.BODY
 
             if (!::retrofit.isInitialized) {
                 retrofit = Retrofit.Builder()

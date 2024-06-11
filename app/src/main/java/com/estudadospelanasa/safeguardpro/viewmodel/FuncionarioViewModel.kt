@@ -12,7 +12,6 @@ import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class FuncionarioViewModel (application: Application): AndroidViewModel(application){
-
     private val repository = FuncionarioRepository(application)
 
     private val  mFuncionarioList = MutableLiveData<List<Funcionario>>()
