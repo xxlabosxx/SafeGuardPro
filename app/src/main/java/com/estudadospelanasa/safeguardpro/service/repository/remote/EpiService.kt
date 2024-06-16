@@ -17,25 +17,30 @@ interface EpiService {
     suspend fun getEpis(): List<Epi>
 
     @GET("get_epi/{epi_id")
-    suspend fun getEpiById(@Path("epi_id")id: Int): Response<List<Epi>>
+    suspend fun getEpiById(@Path("epi_id") id: Int): Response<List<Epi>>
+
+    @GET("select_epis/{epi_ca}")
+    suspend fun getEpiByCa(@Part("epi_ca") ca: Int): Response<List<Epi>>
 
     @Multipart
     @PUT("update_epi/{epi_id}")
     suspend fun updateEpi(
-        @Path("epi_id") epiId: Int,
+        @Path("epi_id") id: Int,
         @Part("nome") nome: RequestBody,
-        @Part("email") email: RequestBody,
-        @Part("cpf") cpf: RequestBody,
-        ): Response<Epi>
+        @Part("validade") validade: RequestBody,
+        @Part("tempo_uso") tempoUso: RequestBody,
+        @Part("ca") ca: RequestBody,
+    ): Response<Epi>
 
     @Multipart
     @POST("add_epi")
     suspend fun createEpi(
         @Part("nome") nome: RequestBody,
-        @Part("cpf") cpf: RequestBody,
-        @Part("email") email: RequestBody,
-        ): Response<Epi>
+        @Part("validade") validade: RequestBody,
+        @Part("tempo_uso") tempoUso: RequestBody,
+        @Part("ca") ca: RequestBody,
+    ): Response<Epi>
 
     @DELETE("delete_epi/{epi_id}")
-    suspend fun deleteEpiById(@Path("epi_id")id: Int): Response<Epi>
+    suspend fun deleteEpiById(@Path("epi_id") id: Int): Response<Epi>
 }

@@ -9,18 +9,25 @@ import androidx.fragment.app.viewModels
 import com.estudadospelanasa.safeguardpro.viewmodel.EpiViewModel
 import com.gustavolabos.SafeGuardPro.R
 import com.gustavolabos.SafeGuardPro.databinding.FragmentCadastroEpiBinding
+import com.gustavolabos.SafeGuardPro.databinding.FragmentRelatorioEpiBinding
 
 class RelatorioEpiFragment : Fragment() {
 
     private val viewModel: EpiViewModel by viewModels()
 
-    private var _binding: FragmentCadastroEpiBinding? = null
-    private val binding: FragmentCadastroEpiBinding get() = _binding!!
+    private var _binding: FragmentRelatorioEpiBinding? = null
+    private val binding: FragmentRelatorioEpiBinding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_relatorio_epi, container, false)
+    ): View {
+        _binding = FragmentRelatorioEpiBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Fazer igual na AllPessoasFragment do FirstApp
     }
 }

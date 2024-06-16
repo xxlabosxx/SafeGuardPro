@@ -18,17 +18,20 @@ class FuncionarioRepository(context: Context) {
     private val funcionarioEmpty =
         Funcionario(0, "", "", "")
 
-    suspend fun getFuncionario(): List<Funcionario> {
+    suspend fun getFuncionarios(): List<Funcionario> {
         return mRemote.getFuncionarios()
     }
 
-    suspend fun insertFuncionario(funcionario: Funcionario): Funcionario{
+    suspend fun insertFuncionario(funcionario: Funcionario): Funcionario {
         return mRemote.createFuncionario(
             nome = funcionario.nome.toRequestBody("text/plain".toMediaTypeOrNull()),
             cpf = funcionario.cpf.toRequestBody("text/plain".toMediaTypeOrNull()),
             email = funcionario.email.toRequestBody("text/plain".toMediaTypeOrNull()),
-         ).body() ?: funcionarioEmpty
+            senha = funcionario.senha.toRequestBody("text/plain".toMediaTypeOrNull()),
+            admin = funcionario.admin.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
+        ).body() ?: funcionarioEmpty
     }
+
     suspend fun getFuncionario(id: Int): Funcionario {
         val response = mRemote.getFuncionarioById(id)
         return if (response.isSuccessful) {
@@ -37,16 +40,28 @@ class FuncionarioRepository(context: Context) {
             funcionarioEmpty
         }
     }
-    suspend fun deleteFuncionario(id: Int): Boolean{
+
+    suspend fun getFuncionarioByCpf(cpf: Int): Funcionario {
+        val response = mRemote.getFuncionarioByCpf(cpf)
+        return if (response.isSuccessful) {
+            response.body()?.first() ?: funcionarioEmpty
+        } else {
+            funcionarioEmpty
+        }
+    }
+
+    suspend fun deleteFuncionario(id: Int): Boolean {
         return mRemote.deleteFuncionario(id).isSuccessful
     }
 
     //update
-    suspend fun updateFuncionario(funcionario: Funcionario): Funcionario{
+    suspend fun updateFuncionario(funcionario: Funcionario): Funcionario {
         return mRemote.updateFuncionario(
             nome = funcionario.nome.toRequestBody("text/plain".toMediaTypeOrNull()),
             cpf = funcionario.cpf.toRequestBody("text/plain".toMediaTypeOrNull()),
             email = funcionario.email.toRequestBody("text/plain".toMediaTypeOrNull()),
+            senha = funcionario.senha.toRequestBody("text/plain".toMediaTypeOrNull()),
+            admin = funcionario.admin.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
             id = funcionario.id
         ).body() ?: funcionarioEmpty
     }

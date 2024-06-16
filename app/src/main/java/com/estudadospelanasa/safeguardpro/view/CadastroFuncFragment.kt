@@ -20,16 +20,12 @@ class CadastroFuncFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(
-            R.layout.fragment_cadastro_func,
-            container, false
-        )
+        _binding = FragmentCadastroFuncBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.load()
+        // Fazer igual a tela de PessoaFragment no FirstApp
     }
 }

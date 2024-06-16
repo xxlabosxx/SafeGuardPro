@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.estudadospelanasa.safeguardpro.service.model.Epi
-import com.estudadospelanasa.safeguardpro.service.repository.remote.EpiRepository
+import com.estudadospelanasa.safeguardpro.service.repository.EpiRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -61,6 +61,16 @@ class EpiViewModel(application: Application): AndroidViewModel(application) {
                 mEpi.postValue(repository.getEpi(id))
             } catch (e: java.lang.Exception) {
                 mErro.postValue((e.message))
+            }
+        }
+    }
+
+    fun getEpiByCa(ca: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                mEpi.postValue(repository.getEpiByCa(ca))
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
             }
         }
     }

@@ -1,7 +1,9 @@
-package com.estudadospelanasa.safeguardpro.service.repository.remote
+package com.estudadospelanasa.safeguardpro.service.repository
 
 import android.content.Context
 import com.estudadospelanasa.safeguardpro.service.model.Epi
+import com.estudadospelanasa.safeguardpro.service.repository.remote.EpiService
+import com.estudadospelanasa.safeguardpro.service.repository.remote.RetrofitClient
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 
@@ -18,9 +20,10 @@ class EpiRepository(context: Context) {
     suspend fun insertEpi(epi: Epi): Epi {
         return mRemote.createEpi(
             nome = epi.nome.toRequestBody("text/plain".toMediaTypeOrNull()),
-            email = epi.email.toRequestBody("text/plain".toMediaTypeOrNull()),
-            cpf = epi.cpf.toRequestBody("text/plain".toMediaTypeOrNull()),
-            ).body() ?: epiEmpty
+            validade = epi.validade.toRequestBody("text/plain".toMediaTypeOrNull()),
+            tempoUso = epi.tempoUso.toRequestBody("text/plain".toMediaTypeOrNull()),
+            ca = epi.ca.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        ).body() ?: epiEmpty
     }
 
     suspend fun getEpi(id: Int): Epi {
@@ -32,16 +35,26 @@ class EpiRepository(context: Context) {
         }
     }
 
-    suspend fun deleteEpi(id: Int): Boolean{
+    suspend fun getEpiByCa(ca: Int): Epi {
+        val response = mRemote.getEpiByCa(ca)
+        return if (response.isSuccessful) {
+            response.body()?.first() ?: epiEmpty
+        } else {
+            epiEmpty
+        }
+    }
+
+    suspend fun deleteEpi(id: Int): Boolean {
         return mRemote.deleteEpiById(id).isSuccessful
     }
 
     suspend fun updateEpi(epi: Epi): Epi {
         return mRemote.updateEpi(
             nome = epi.nome.toRequestBody("text/plain".toMediaTypeOrNull()),
-            cpf = epi.cpf.toRequestBody("text/plain".toMediaTypeOrNull()),
-            email = epi.email.toRequestBody("text/plain".toMediaTypeOrNull()),
-            epiId = epi.id
+            validade = epi.validade.toRequestBody("text/plain".toMediaTypeOrNull()),
+            tempoUso = epi.tempoUso.toRequestBody("text/plain".toMediaTypeOrNull()),
+            ca = epi.ca.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
+            id = epi.id
         ).body() ?: epiEmpty
     }
 }

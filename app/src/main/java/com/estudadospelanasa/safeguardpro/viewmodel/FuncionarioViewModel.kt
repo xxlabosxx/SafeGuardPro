@@ -35,7 +35,7 @@ class FuncionarioViewModel (application: Application): AndroidViewModel(applicat
     fun load() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                mFuncionarioList.postValue(repository.getFuncionario())
+                mFuncionarioList.postValue(repository.getFuncionarios())
             } catch (e: Exception) {
                 mErro.postValue(e.message)
             }
@@ -68,6 +68,16 @@ class FuncionarioViewModel (application: Application): AndroidViewModel(applicat
                 mFuncionario.postValue(repository.getFuncionario(id))
             } catch (e: Exception) {
                 mErro.postValue((e.message))
+            }
+        }
+    }
+
+    fun getFuncionarioByCpf(cpf: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                mFuncionario.postValue(repository.getFuncionarioByCpf(cpf))
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
             }
         }
     }
