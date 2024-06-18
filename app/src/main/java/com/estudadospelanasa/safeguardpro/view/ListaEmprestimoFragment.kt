@@ -5,56 +5,58 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.estudadospelanasa.safeguardpro.viewmodel.EntregaViewModel
 import com.gustavolabos.SafeGuardPro.R
+import com.gustavolabos.SafeGuardPro.databinding.FragmentEmprestimoBinding
+import com.gustavolabos.SafeGuardPro.databinding.FragmentListaEmprestimoBinding
+import com.programardores.safeguardpro.view.adapter.EmprestimoAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ListaEmprestimoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ListaEmprestimoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private val viewModel: EntregaViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var adapter: EmprestimoAdapter
+
+
+    private var _binding: FragmentListaEmprestimoBinding? = null
+    private val binding: FragmentListaEmprestimoBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lista_emprestimo, container, false)
+        _binding = FragmentListaEmprestimoBinding.inflate(inflater, container, false)
+        return binding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //Quando clicar em algum item da lista vai ser redirecionado
+        adapter = EmprestimoAdapter(viewModel.entregaList.value){emprestimo ->
+            val emprestimoBundle = Bundle()
+            emprestimoBundle.putInt("id", emprestimo.id)
+            arguments = emprestimoBundle
+            findNavController().navigate(R.id.emprestimoFragment, arguments)
+        }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ListaEmprestimoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ListaEmprestimoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+
+        //Configura a recycler
+        val recycler = binding.rvEmprestimo
+        recycler.layoutManager = LinearLayoutManager(requireContext())
+        recycler.adapter = adapter
+
+        //obeserva
+        viewModel.entregaList.observe(viewLifecycleOwner){
+            adapter.updateEntrega(it)
+        }
+
+        //Navegar para a tela de cadastro de funcionario
+        binding.btnAdd.setOnClickListener {
+            findNavController().navigate(R.id.emprestimoFragment)
+        }
+
+        // Carregar as funcionario cadastradas
+        viewModel.loadEntrega()
     }
 }

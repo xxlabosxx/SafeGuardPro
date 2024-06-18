@@ -5,4 +5,5 @@ data class Entrega(
     var idFuncionario: Int = 0,
     var idEpi: Int = 0,
     var dataEntrega: String,
+    var dataDevolver: String,
 )

@@ -164,17 +164,29 @@
         app:srcCompat="@drawable/seta"/>
 
     <Button
-        android:id="@+id/EPIcadastrobtn"
+        android:id="@+id/btnCadastrarEntrega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:backgroundTint="#FFC107"
         android:text="@string/confirmar"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dataDevolver"/>
+        app:layout_constraintTop_toBottomOf="@+id/dataDevolver" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deletar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCadastrarEntrega"
+        app:layout_constraintTop_toBottomOf="@+id/dataDevolver" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,7 +49,7 @@
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EPIid" />
+        app:layout_constraintTop_toBottomOf="@+id/CAepi" />
 
     <TextView
         android:id="@+id/EPIcadastrotxt"
@@ -98,14 +98,14 @@
         app:layout_constraintTop_toBottomOf="@+id/EPIcadastrotxt" />
 
     <EditText
-        android:id="@+id/EPIid"
+        android:id="@+id/CAepi"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
         android:background="#D9D9DA"
         android:radius="25dp"
-        android:hint="ID do CA:"
+        android:hint="CA da EPI:"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -164,17 +164,29 @@
         app:srcCompat="@drawable/seta"/>
 
     <Button
-        android:id="@+id/EPIcadastrobtn"
+        android:id="@+id/btnCadastroFunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:backgroundTint="#FFC107"
         android:text="@string/confirmar"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EPIcategoria"/>
+        app:layout_constraintTop_toBottomOf="@+id/EPIcategoria" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deletar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCadastroFunc"
+        app:layout_constraintTop_toBottomOf="@+id/EPIcategoria" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

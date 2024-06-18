@@ -32,7 +32,7 @@ class FuncionarioViewModel (application: Application): AndroidViewModel(applicat
     private val mErro = MutableLiveData<String>()
     val erro: LiveData<String> = mErro
 
-    fun load() {
+    fun loadFuncionario() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 mFuncionarioList.postValue(repository.getFuncionarios())

@@ -10,7 +10,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 class EntregaRepository(context: Context) {
     private val mRemote = RetrofitClient.createService(EntregaService::class.java)
 
-    private val entregaEmpty = Entrega(0, 0, 0, "")
+    private val entregaEmpty = Entrega(0, 0, 0, "", "")
 
     suspend fun insertEntrega(entrega: Entrega): Entrega {
         return mRemote.createEntrega(

@@ -38,108 +38,22 @@
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
         app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEmprestimo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        tools:listitem="@layout/list_item_emprestimo" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp">
-
-            <TextView
-                android:id="@+id/textSalario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Validade:"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-            <TextView
-                android:id="@+id/tvSalario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="25/12/2026"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textSalario"
-                app:layout_constraintTop_toBottomOf="@+id/textSalario" />
-
-            <TextView
-                android:id="@+id/descricaoEpi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Descrição:"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvSalario" />
-
-
-            <TextView
-                android:id="@+id/tvId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="qualquer dispositivo ou aparelho concebido para ser utilizado
-                 por um indivíduo quando exposto a um ou mais perigos para a saúde
-                  e segurança"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/descricaoEpi" />
-
-            <TextView
-                android:id="@+id/textNome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Categoria:"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/cardView"
-                tools:ignore="NotSibling" />
-
-            <TextView
-                android:id="@+id/tvNome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Capacete"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textNome" />
-
-            <TextView
-                android:id="@+id/textCpf"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ID:"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNome" />
-
-            <TextView
-                android:id="@+id/editText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="21"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textCpf" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/btnVoltarEpi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFC107"
-        android:text="Voltar"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintStart_toStartOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

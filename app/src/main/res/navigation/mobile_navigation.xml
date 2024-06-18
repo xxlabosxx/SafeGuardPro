@@ -51,6 +51,18 @@
         android:name="com.estudadospelanasa.safeguardpro.view.EntregaFragment"
         android:label="fragment_entrega"
         tools:layout="@layout/fragment_entrega" />
+    <fragment
+        android:id="@+id/listaEmprestimoFragment"
+        android:name="com.estudadospelanasa.safeguardpro.view.ListaEmprestimoFragment"
+        android:label="ListaEmprestimoFragment" />
+    <fragment
+        android:id="@+id/emprestimoFragment"
+        android:name="com.estudadospelanasa.safeguardpro.view.EmprestimoFragment"
+        android:label="EmprestimoFragment" />
+    <fragment
+        android:id="@+id/listaFuncFragment2"
+        android:name="com.estudadospelanasa.safeguardpro.view.ListaFuncFragment"
+        android:label="ListaFuncFragment" />
 
 
 </navigation>

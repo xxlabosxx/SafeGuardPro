@@ -31,7 +31,7 @@ class EntregaViewModel(application: Application) : AndroidViewModel(application)
     private val mErro = MutableLiveData<String>()
     val erro: LiveData<String> = mErro
 
-    fun load() {
+    fun loadEntrega() {
         viewModelScope.launch(Dispatchers.IO) {
             mEntregaList.postValue(repository.getEntregas())
         }

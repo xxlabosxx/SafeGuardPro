@@ -34,7 +34,7 @@ class EpiViewModel(application: Application): AndroidViewModel(application) {
 
 
 
-    fun load() {
+    fun loadEpi() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 mEpiList.postValue(repository.getEpi())
