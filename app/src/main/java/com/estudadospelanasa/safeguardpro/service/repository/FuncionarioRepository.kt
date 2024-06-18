@@ -1,12 +1,9 @@
 package com.estudadospelanasa.safeguardpro.service.repository
 
 import android.content.Context
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.estudadospelanasa.safeguardpro.service.model.Funcionario
 import com.estudadospelanasa.safeguardpro.service.repository.remote.FuncionarioService
 import com.estudadospelanasa.safeguardpro.service.repository.remote.RetrofitClient
-import kotlinx.coroutines.Dispatchers
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 

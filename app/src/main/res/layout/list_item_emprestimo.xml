@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/listaFunc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/idFuncEmprestimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID do Funcionário:"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
+
+            <TextView
+                android:id="@+id/tvIdFuncionario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idFuncEmprestimo" />
+
+            <TextView
+                android:id="@+id/textId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data do emprestimo:"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIdFuncionario" />
+
+
+            <TextView
+                android:id="@+id/adasdasd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="33/33/1222"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDataDevolver" />
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20/22/1111"
+                app:layout_constraintStart_toEndOf="@+id/textId"
+                app:layout_constraintTop_toBottomOf="@+id/textId" />
+
+            <TextView
+                android:id="@+id/idEmprestimo"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="ID do emprestimo:"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardView"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/tvIdEmprestimo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idEmprestimo" />
+
+            <TextView
+                android:id="@+id/caEpiEmprestado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CA do EPI:"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIdEmprestimo" />
+
+            <TextView
+                android:id="@+id/tvCpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/caEpiEmprestado" />
+
+            <TextView
+                android:id="@+id/tvDataDevolver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data para devolver:"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvId" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

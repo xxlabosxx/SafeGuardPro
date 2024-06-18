@@ -60,7 +60,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
+    <ImageButton
+        android:backgroundTint="#FFC107"
         android:id="@+id/imageView"
         android:layout_width="89dp"
         android:layout_height="89dp"

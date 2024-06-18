@@ -8,7 +8,7 @@
     >
 
     <EditText
-        android:id="@+id/EPIdatavalidade"
+        android:id="@+id/edtDataValidade"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="#D9D9DA"
-        android:hint="Categoria:"
+        android:hint="Categoria do EPI:"
         android:layout_marginTop="35dp"
         android:minHeight="50dp"
         android:radius="25dp"
@@ -105,11 +105,11 @@
         android:layout_marginTop="35dp"
         android:background="#D9D9DA"
         android:radius="25dp"
-        android:hint="ID do EPI:"
+        android:hint="ID do CA:"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EPIdatavalidade" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDataValidade" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
@@ -123,8 +123,8 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:backgroundTint="#FFC107"
         android:layout_width="89dp"
         android:layout_height="89dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"

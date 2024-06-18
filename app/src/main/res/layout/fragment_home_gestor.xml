@@ -18,8 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:backgroundTint="#FFC107"
         android:layout_width="86dp"
         android:layout_height="91dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
@@ -77,17 +77,18 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
         />
 
-    <TextView
-        android:id="@+id/tvCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnCadastroEPI"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:text="Cadastro EPI"
-        android:textColor="#FFEB3B"
-        android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"/>
 
     <View
         android:id="@+id/view5"
@@ -100,13 +101,14 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
         />
 
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Relatório EPI"
-        android:textColor="#FFEB3B"
-        android:textSize="35sp"
+    <Button
+        android:id="@+id/btnEmprestimoEPI"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:text="Emprestimo EPI"
         app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,13 +124,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
-    <TextView
-        android:id="@+id/text3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnCadastroFunc"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="@color/black"
+        android:textSize="26sp"
         android:text="Cadastro funcionário"
-        android:textColor="#FFEB3B"
-        android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/view4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,25 +159,27 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
         />
 
-    <TextView
-        android:id="@+id/relatorio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Relatório Funcionário"
-        android:textColor="#FFEB3B"
-        android:textSize="35sp"
+    <Button
+        android:id="@+id/btnListaFunc"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:text="Lista Funcionários"
         app:layout_constraintBottom_toTopOf="@+id/view6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
-    <TextView
-        android:id="@+id/hint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cadastro Entrega"
-        android:textColor="#FFEB3B"
-        android:textSize="35dp"
+    <Button
+        android:id="@+id/btnListaEPI"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:textColor="#000000"
+        android:backgroundTint="#FFEB3B"
+        android:textSize="26sp"
+        android:text="Lista dos EPI"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -22,14 +22,6 @@
         android:name="com.estudadospelanasa.safeguardpro.view.HomeGestorFragment"
         android:label="HomeGestorFragment" />
     <fragment
-        android:id="@+id/regrasFragment"
-        android:name="com.estudadospelanasa.safeguardpro.view.RegrasFragment"
-        android:label="RegrasFragment" />
-    <fragment
-        android:id="@+id/relatorioEpiFragment"
-        android:name="com.estudadospelanasa.safeguardpro.view.RelatorioEpiFragment"
-        android:label="RelatorioEpiFragment" />
-    <fragment
         android:id="@+id/loginFragment"
         android:name="com.estudadospelanasa.safeguardpro.view.LoginFragment"
         android:label="fragment_login"
@@ -46,5 +38,19 @@
         android:id="@+id/telaInicialFragment"
         android:name="com.estudadospelanasa.safeguardpro.view.TelaInicialFragment"
         android:label="TelaInicialFragment" />
+    <fragment
+        android:id="@+id/listaEpiFragment"
+        android:name="com.estudadospelanasa.safeguardpro.view.ListaEpiFragment"
+        android:label="ListaEpiFragment" />
+    <fragment
+        android:id="@+id/listaFuncFragment"
+        android:name="com.estudadospelanasa.safeguardpro.view.ListaFunc"
+        android:label="ListaFunc" />
+    <fragment
+        android:id="@+id/entregaFragment"
+        android:name="com.estudadospelanasa.safeguardpro.view.EntregaFragment"
+        android:label="fragment_entrega"
+        tools:layout="@layout/fragment_entrega" />
+
 
 </navigation>

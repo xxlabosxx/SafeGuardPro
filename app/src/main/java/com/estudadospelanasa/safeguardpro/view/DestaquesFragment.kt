@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.gustavolabos.SafeGuardPro.R
 import com.gustavolabos.SafeGuardPro.databinding.FragmentCadastroEpiBinding
 import com.gustavolabos.SafeGuardPro.databinding.FragmentDestaquesBinding
@@ -23,5 +24,8 @@ class DestaquesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.btnEPIdestaque.setOnClickListener {
+            findNavController().navigate(R.id.listaEpiFragment)
+        }
     }
 }

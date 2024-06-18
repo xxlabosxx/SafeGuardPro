@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
+        android:backgroundTint="#FFC107"
         android:id="@+id/imageView"
         android:layout_width="89dp"
         android:layout_height="89dp"
@@ -46,7 +47,7 @@
         app:srcCompat="@drawable/notificao"/>
 
     <View
-        android:layout_width="100dp"
+        android:layout_width="75dp"
         android:layout_height="2dp"
         android:layout_marginTop="76dp"
         android:background="#FFC107"
@@ -67,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <View
-        android:layout_width="100dp"
+        android:layout_width="75dp"
         android:layout_height="2dp"
         android:layout_marginTop="76dp"
         android:background="#FFC107"
@@ -76,63 +77,63 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
         />
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
+    <Button
+        android:id="@+id/btnEPIdestaque"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:text="EPI"
-        android:textColor="#FFEB3B"
-        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <View
         android:id="@+id/view8"
         android:layout_width="350dp"
         android:layout_height="2dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="20dp"
         android:background="#FFC107"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEPIdestaque" />
 
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="380dp"
-        android:text="Validade"
-        android:textColor="#FFEB3B"
-        android:textSize="30sp"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+<!--    <Button-->
+<!--        android:id="@+id/btnValidadeDestaque"        -->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:backgroundTint="#FFEB3B"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:text="Validade"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view7" />-->
 
-    <View
-        android:id="@+id/view7"
-        android:layout_width="350dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="332dp"
-        android:background="#FFC107"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+<!--    <View-->
+<!--        android:id="@+id/view7"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:layout_marginTop="332dp"-->
+<!--        android:background="#FFC107"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />-->
 
-    <TextView
-        android:id="@+id/text3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regras"
-        android:textColor="#FFEB3B"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/view7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view8" />
-
-    <View
-        android:layout_width="350dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="456dp"
-        android:background="#FFC107"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+<!--    <Button-->
+<!--        android:id="@+id/btnRegrasDestaques"        -->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:backgroundTint="#FFEB3B"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="30sp"-->
+<!--        android:text="Regras"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/view7"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view8" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

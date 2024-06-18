@@ -27,8 +27,9 @@ interface EpiService {
     suspend fun updateEpi(
         @Path("epi_id") id: Int,
         @Part("nome") nome: RequestBody,
-        @Part("validade") validade: RequestBody,
-        @Part("tempo_uso") tempoUso: RequestBody,
+        @Part("dataValidade") dataValidade: RequestBody,
+        @Part("descricao") descricao: RequestBody,
+        @Part("categoria") categoria: RequestBody,
         @Part("ca") ca: RequestBody,
     ): Response<Epi>
 
@@ -36,8 +37,9 @@ interface EpiService {
     @POST("add_epi")
     suspend fun createEpi(
         @Part("nome") nome: RequestBody,
-        @Part("validade") validade: RequestBody,
-        @Part("tempo_uso") tempoUso: RequestBody,
+        @Part("dataValidade") dataValidade: RequestBody,
+        @Part("descricao") descricao: RequestBody,
+        @Part("categoria") categoria: RequestBody,
         @Part("ca") ca: RequestBody,
     ): Response<Epi>
 

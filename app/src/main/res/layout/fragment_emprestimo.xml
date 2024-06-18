@@ -5,60 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    android:id="@+id/cadastroFuncFragment"
     >
 
     <EditText
-        android:id="@+id/edtCpf"
+        android:id="@+id/epiEmprestadoTxt"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
         android:background="#D9D9DA"
-        android:hint="CPF:"
+        android:hint="ID do epi emprestado: "
         android:textSize="28sp"
-        android:autofillHints="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNomeFunc" />
+        app:layout_constraintTop_toBottomOf="@+id/emprestimoId"
+        />
 
     <EditText
-        android:id="@+id/FUNCconfirmasenha"
+        android:id="@+id/dataDevolver"
         android:layout_width="369dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="35dp"
         android:background="#D9D9DA"
+        android:hint="Data para devolver:"
+        android:layout_marginTop="35dp"
+        android:minHeight="50dp"
         android:radius="25dp"
-        android:hint="Confirmar senha:"
         android:textSize="28sp"
-        android:autofillHints="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/dataEmprestimo" />
+
 
     <EditText
-        android:id="@+id/edtSenha"
+        android:id="@+id/dataEmprestimo"
         android:layout_width="369dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="35dp"
         android:background="#D9D9DA"
-        android:radius="25dp"
-        android:hint="Senha:"
+        android:hint="Data do emprestimo: "
+        android:minHeight="50dp"
         android:textSize="28sp"
-        android:autofillHints="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCpf" />
-
+        app:layout_constraintTop_toBottomOf="@+id/idFuncionarioEmprestimo" />
 
     <TextView
-        android:id="@+id/FUNCtxt"
+        android:id="@+id/tvEmprestimo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:text="Cadastro funcionário"
+        android:text="Emprestimo"
         android:textColor="#FFEB3B"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,54 +64,52 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <View
-        android:id="@+id/quebralinha1"
+        android:id="@+id/view"
         android:layout_width="350dp"
         android:layout_height="2dp"
         android:background="#FFC107"
-        app:layout_constraintBottom_toTopOf="@+id/FUNCtxt"
+        app:layout_constraintBottom_toTopOf="@+id/tvEmprestimo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <View
-        android:id="@+id/quebralinha2"
+        android:id="@+id/view2"
         android:layout_width="350dp"
         android:layout_height="2dp"
         android:background="#FFC107"
-        app:layout_constraintBottom_toTopOf="@+id/edtNomeFunc"
+        app:layout_constraintBottom_toTopOf="@+id/emprestimoId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEmprestimo" />
 
     <EditText
-        android:id="@+id/edtNomeFunc"
+        android:id="@+id/emprestimoId"
         android:layout_width="369dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="40dp"
         android:background="#D9D9DA"
-        android:hint="Nome:"
+        android:hint="ID do emprestimo: "
         android:textSize="28sp"
-        android:autofillHints="name"
         app:circularflow_radiusInDP=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEmprestimo" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/FUNCsalario"-->
-<!--        android:layout_width="369dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_marginTop="35dp"-->
-<!--        android:background="#D9D9DA"-->
-<!--        android:radius="25dp"-->
-<!--        android:hint="E-mail:"-->
-<!--        android:textSize="28sp"-->
-<!--        android:autofillHints="emailAddress"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/edtCpf" />-->
+    <EditText
+        android:id="@+id/idFuncionarioEmprestimo"
+        android:layout_width="369dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="35dp"
+        android:background="#D9D9DA"
+        android:radius="25dp"
+        android:hint="ID do funcionário: "
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epiEmprestadoTxt" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
@@ -124,71 +120,61 @@
         android:backgroundTint="#FFC107"
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:backgroundTint="#FFC107"
         android:layout_width="89dp"
         android:layout_height="89dp"
-        android:backgroundTint="#FFC107"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
         app:srcCompat="@drawable/safe_guard_pro_1_removebg_preview_3" />
 
     <ImageView
-        android:id="@+id/IMGperfil"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
-        app:srcCompat="@drawable/icone"/>
+        app:srcCompat="@drawable/icone"
+        />
 
     <ImageView
-        android:id="@+id/IMGnotificacao"
+        android:id="@+id/imageView3"
         android:layout_width="56dp"
         android:layout_height="46dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintEnd_toStartOf="@+id/IMGperfil"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/notificao" />
+        app:srcCompat="@drawable/notificao"/>
 
     <ImageView
-        android:id="@+id/IMGmenu"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintEnd_toStartOf="@+id/IMGnotificacao"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
         app:srcCompat="@drawable/seta"/>
 
     <Button
-        android:id="@+id/btnCadastroFunc"
+        android:id="@+id/EPIcadastrobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="#FFC107"
         android:text="@string/confirmar"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCconfirmasenha" />
+        app:layout_constraintTop_toBottomOf="@+id/dataDevolver"/>
 
-    <Button
-        android:id="@+id/btnDeletar"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deletar"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCadastroFunc"
-        app:layout_constraintTop_toBottomOf="@+id/FUNCconfirmasenha" />
 </androidx.constraintlayout.widget.ConstraintLayout>
